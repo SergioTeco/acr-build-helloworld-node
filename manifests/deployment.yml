@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: sergiotecoacrbuildhelloworldnode 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sergiotecoacrbuildhelloworldnode 
+    spec:
+      containers:
+        - name: sergiotecoacrbuildhelloworldnode 
+          image: myregistrysergi.azurecr.io/sergiotecoacrbuildhelloworldnode
+          ports:
+          - containerPort: 80
